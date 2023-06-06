@@ -1,0 +1,718 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;900&display=swap");
+@import url('https://fonts.cdnfonts.com/css/openlink href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-sans');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*=======================變數設定=====================*/
+/*colors-black*/
+/*colors-main*/
+/*border-radius*/
+/*margin-bottom*/
+/*font-weight*/
+/*line_height*/
+/*font-size*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020202;
+}
+
+/*==================== 設計風格區域 ====================*/
+.bold {
+  font-weight: 900;
+  line-height: 120%;
+  font-family: "Noto Sans TC", "Noto serif TC";
+}
+
+.regular {
+  font-weight: 400;
+  line-height: 120%;
+  font-family: "Noto Sans TC", "Noto serif TC";
+}
+
+.display01 {
+  font-size: 160px;
+  color: #FFFFFF;
+}
+
+.display02 {
+  font-size: 120px;
+  color: #FFFFFF;
+}
+
+.display03 {
+  font-size: 80px;
+  color: #FFFFFF;
+}
+
+.heading01 {
+  font-size: 48px;
+  color: #FFFFFF;
+}
+
+.heading02 {
+  font-size: 40px;
+  color: #FFFFFF;
+}
+
+.heading03 {
+  font-size: 32px;
+  color: #FFFFFF;
+}
+
+.heading05 {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.heading06 {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.text-body {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.text-small {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.text-tiny {
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+/*=================== 元件區域 ===================*/
+/*======= 導覽列 =======*/
+.navigation {
+  max-width: 1296px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  border-bottom: 1px solid #FFFFFF;
+  position: sticky;
+  top: 0;
+  background-color: #020202;
+  z-index: 10000;
+  height: 80px;
+  /*導覽列圖片*/
+  /*導覽列按鈕*/
+}
+.navigation a {
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png);
+  height: 100%;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.navigation ul {
+  display: flex;
+  align-items: center;
+}
+.navigation ul li, .navigation ul span {
+  margin: 12px;
+}
+.navigation ul span {
+  color: #FFFFFF;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: 12px;
+  }
+  .navigation ul li {
+    display: none;
+  }
+  .navigation ul span {
+    display: block;
+  }
+}
+/*======按鈕區塊=====*/
+/*CTA按鈕*/
+.button-CTA {
+  display: flex;
+  border-radius: 16px;
+  border: 1px solid #FFFFFF;
+  padding: 20px 40px;
+  background-color: #020202;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 900;
+}
+.button-CTA:hover {
+  background-color: #FFFFFF;
+  color: #020202;
+}
+
+/*有含icon按鈕*/
+.button-has-icon {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid #F2F2F2;
+  padding: 20px 32px 20px 40px;
+  background-color: #FFFFFF;
+  color: #525252;
+  text-decoration: none;
+  background-color: #FFFFFF;
+}
+.button-has-icon:hover {
+  background-color: #F2F2F2;
+}
+.button-has-icon p {
+  text-decoration: none;
+}
+.button-has-icon span {
+  font-size: 16px;
+}
+
+/*篩選的小按鈕*/
+.filter-subButtons {
+  display: flex;
+  font-size: 16px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  color: #020202;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.filter-subButtons:hover {
+  background-color: #F2F2F2;
+  color: #020202;
+  font-weight: 900;
+}
+
+/*AI卡片頁面按鈕*/
+.pages {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/*有問題 除了line-height 還有沒有更好的方法*/
+.page-btn-on {
+  width: 48px;
+  height: 48px;
+  background-color: #020202;
+  color: #FFFFFF;
+  border-radius: 16px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 48px;
+  margin: 2px;
+}
+
+.page-btn-off {
+  width: 48px;
+  height: 48px;
+  background-color: #FFFFFF;
+  color: #020202;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 48px;
+  margin: 2px;
+}
+
+/*====== 卡片樣式======*/
+.cardBg {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #F2F2F2;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0px auto;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+.cardBg .cardHidden {
+  overflow: hidden;
+}
+.cardBg .cardHidden img {
+  width: 100%;
+  display: block;
+}
+.cardBg .cardHidden img:hover {
+  transform: scale(1.5);
+  transition: all 0.5s;
+}
+.cardBg .cardInfo {
+  flex-grow: 1;
+}
+.cardBg .cardInfo, .cardBg .cardAuthor, .cardBg .cardClass {
+  flex-grow: 1;
+  width: 100%;
+  padding: 20px 32px;
+}
+.cardBg .cardInfo .heading06, .cardBg .cardInfo .text-small, .cardBg .cardInfo .text-body, .cardBg .cardAuthor .heading06, .cardBg .cardAuthor .text-small, .cardBg .cardAuthor .text-body, .cardBg .cardClass .heading06, .cardBg .cardClass .text-small, .cardBg .cardClass .text-body {
+  color: #020202;
+}
+.cardBg .heading {
+  margin-bottom: 12px;
+}
+.cardBg .cardInfo, .cardBg .cardAuthor {
+  border-bottom: 1px solid #F2F2F2;
+}
+.cardBg .cardAuthor, .cardBg .cardClass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardBg .shareIcon img {
+  display: block;
+  width: 18px;
+}
+
+@media (max-width: 768px) {
+  .cardBg {
+    width: 49%;
+  }
+}
+/*===== 搜尋列 =======*/
+.inputPosition {
+  position: relative;
+}
+.inputPosition .searchBar {
+  width: 100%;
+  background-color: #F2F2F2;
+  padding: 20px 76px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  border: 0px;
+}
+.inputPosition span {
+  position: absolute;
+  top: 16px;
+  left: 40px;
+  font-size: 18px;
+  margin: 4px;
+}
+
+/*====================排版區塊=======================*/
+.CTA {
+  max-width: 1296px;
+  margin: 0px auto;
+  margin-bottom: 160px;
+}
+.CTA h2 {
+  margin: 40px 0px;
+}
+.CTA button {
+  margin-bottom: 100px;
+}
+.CTA .motin {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.CTA .motin .motionSpace {
+  width: 60%;
+}
+.CTA .motin img {
+  width: 33.3333%;
+}
+
+@media (max-width: 768px) {
+  .CTA {
+    padding: 0px 12px;
+  }
+  .CTA .display02 {
+    font-size: 48px;
+  }
+  .CTA .button-CTA {
+    font-size: 20px;
+  }
+  .CTA .motin {
+    justify-content: center;
+  }
+  .CTA .motin .motionSpace {
+    width: auto;
+  }
+}
+.sectionService {
+  max-width: 1296px;
+  margin: 0px auto;
+  margin-bottom: 160px;
+}
+.sectionService .OurService {
+  display: flex;
+  margin-bottom: 80px;
+  gap: 24px;
+}
+.sectionService .OurServiceIntro {
+  width: 60%;
+}
+.sectionService ul {
+  display: flex;
+  gap: 24px;
+  /*卡片內容*/
+}
+.sectionService ul li {
+  width: 33.333333%;
+  padding: 80px 40px;
+  border: 1px solid #525252;
+  border-radius: 16px;
+}
+.sectionService ul li img {
+  width: 19%;
+  margin-bottom: 20px;
+}
+.sectionService ul li h3 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .sectionService {
+    padding: 0px 12px;
+  }
+  .sectionService .OurService {
+    flex-direction: column;
+  }
+  .sectionService .OurService .heading03 {
+    font-size: 20px;
+  }
+  .sectionService .OurService .heading01 {
+    font-size: 32px;
+  }
+  .sectionService ul {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+  }
+  .sectionService ul li {
+    width: 49%;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 375px) {
+  .sectionService ul li {
+    padding: 40px 20px;
+  }
+}
+.sectionCoopration {
+  max-width: 1296px;
+  margin: 0px auto;
+  margin-bottom: 160px;
+}
+.sectionCoopration h3 {
+  margin-bottom: 80px;
+}
+
+.logoContainer {
+  position: relative;
+  margin-bottom: 48px;
+  overflow-x: scroll;
+}
+.logoContainer .logo-linear {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 6%, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 94%, rgb(0, 0, 0) 100%);
+}
+.logoContainer .logos {
+  display: flex;
+  justify-content: center;
+}
+.logoContainer .logos img {
+  width: 160px;
+  margin: 10px;
+}
+
+.usersCard ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.usersCard ul li {
+  width: 33.33333%;
+  padding: 40px;
+  margin-bottom: 24px;
+  gap: 24px;
+  background-color: rgba(255, 255, 255, 0.0745098039);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.usersCard ul li p {
+  flex-grow: 1;
+}
+.usersCard ul li .stars, .usersCard ul li .text-body {
+  margin-bottom: 20px;
+}
+.usersCard ul li .usersInfo {
+  display: flex;
+}
+.usersCard ul li .usersInfo img {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+}
+.usersCard ul li .usersInfo h4 {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .sectionCoopration {
+    padding: 0px 12px;
+  }
+  .sectionCoopration h3 {
+    margin-bottom: 24px;
+  }
+  .sectionCoopration ul {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .sectionCoopration ul li {
+    width: 100%;
+    padding: 20px;
+    flex-grow: 1;
+    gap: 0px;
+  }
+}
+@media (max-width: 375px) {
+  li {
+    width: 100%;
+  }
+}
+/*這些超酷的應用，都來自 AI工具王*/
+.sectionAIKing {
+  margin: 0px auto;
+  background-color: #FFFFFF;
+  border-radius: 160px;
+  /*超酷應用卡片容器*/
+  /*篩選按鈕列*/
+  /*AI卡片區*/
+}
+.sectionAIKing .container {
+  max-width: 1296px;
+  padding: 160px 0px;
+  margin: 0px auto;
+  margin-bottom: 78px;
+  /*些超酷的應用，都來自 AI工具王*/
+  /*文字樣式*/
+}
+.sectionAIKing .container h3 {
+  margin-bottom: 80px;
+}
+.sectionAIKing .container .display03, .sectionAIKing .container .text-body {
+  color: #020202;
+}
+.sectionAIKing .container p {
+  color: #525252;
+}
+.sectionAIKing .filterContainer {
+  width: 100%;
+  height: 64px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+.sectionAIKing .filterContainer .filter-subButtons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 8px;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .sectionAIKing .filterContainer {
+    height: 40px;
+  }
+}
+.sectionAIKing .cardIntroduce {
+  margin-bottom: 160px;
+}
+.sectionAIKing .cardIntroduce ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .sectionAIKing {
+    border-radius: 20px;
+  }
+  .sectionAIKing .container {
+    padding: 160px 12px;
+  }
+  .sectionAIKing .cardIntroduce {
+    margin-bottom: auto;
+  }
+  .sectionAIKing .cardIntroduce ul {
+    gap: 12px;
+  }
+  .sectionAIKing .pages {
+    justify-content: center;
+  }
+}
+/*現在就來建立屬於你的服務吧*/
+.sectionBuildService {
+  max-width: 1296px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0px;
+  margin-bottom: 80px;
+}
+.sectionBuildService h3 {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .sectionBuildService {
+    padding: 120px 77px;
+  }
+}
+@media (max-width: 375px) {
+  .sectionBuildService {
+    padding: 120px 73px;
+    margin: 0px auto;
+  }
+  .sectionBuildService h3 {
+    text-align: center;
+  }
+  .sectionBuildService .button-CTA {
+    font-size: 20px;
+  }
+}
+.sectionFooter {
+  max-width: 1296px;
+  margin: 0px auto;
+  /*footer社群連結*/
+}
+.sectionFooter .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0px;
+  border-top: 1px solid #FFFFFF;
+}
+.sectionFooter .footer img {
+  height: 40px;
+}
+@media (max-width: 768px) {
+  .sectionFooter .footer {
+    flex-wrap: wrap;
+  }
+  .sectionFooter .footer .footer-nav {
+    order: 1;
+  }
+  .sectionFooter .footer img {
+    margin-bottom: 40px;
+  }
+}
+.sectionFooter .footerSMS {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0px;
+  border-top: 1px solid #FFFFFF;
+}
+.sectionFooter .footerSMS .AItoolKing {
+  padding-right: 80px;
+}
+.sectionFooter .footerSMS .SMS {
+  display: flex;
+  flex-grow: 1;
+}
+.sectionFooter .footerSMS .SMS a {
+  padding: 12px 10px;
+  text-decoration: none;
+}
+.sectionFooter .footerSMS .backToTop {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+.sectionFooter .footerSMS .backToTop p {
+  margin-right: 12px;
+}
+
+@media (max-width: 768px) {
+  .sectionFooter {
+    padding: 0px 12px;
+  }
+  .AItoolKing {
+    order: 1;
+    margin-bottom: 24px;
+    padding-right: auto;
+  }
+  .SMS {
+    order: 3;
+    width: 100%;
+  }
+  .backToTop {
+    order: 2;
+    margin-bottom: 24px;
+  }
+}/*# sourceMappingURL=all.css.map */

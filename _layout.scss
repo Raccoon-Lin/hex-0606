@@ -1,0 +1,843 @@
+
+/*=======================變數設定=====================*/
+
+//顏色
+/*colors-black*/
+$black100: #020202;
+$black80:  #525252;
+$black60:  #919191;
+$black40:  #D1D1D1;
+$black20:  #F2F2F2;
+$black0:  #FFFFFF;
+$black0-8:#ffffff13;
+
+/*colors-main*/
+$Primary:#F18724;
+$Surface:#F2EFE7;
+
+//圓角
+/*border-radius*/
+$radius-s:16px;
+$radius-m:20px;
+$radius-l:160px;
+
+//間距
+/*margin-bottom*/
+$section-m:160px;
+
+//文字
+/*font-weight*/
+$font-weight_regular: 400;
+$font-weight_bold: 900;
+
+/*line_height*/
+$line-height: 120%;
+
+/*font-size*/
+$display01:160px;
+$display02:120px;
+$display03:80px;
+$heading01:48px;
+$heading02:40px;
+$heading03:32px;
+$heading05:24px;
+$heading06:20px;
+$body:16px;
+$small:14px;
+$tiny:12px;
+
+
+
+
+*,*::before,*::after {
+    box-sizing: border-box;
+  //   outline: 1px dashed orange;
+  }
+  
+  // @media (max-width:768px) {
+  //     *,*::before,*::after {
+  //         outline: 1px dashed cyan;
+  //     }
+  // }
+  
+  // @media (max-width:375px) {
+  //     *,*::before,*::after {
+  //         outline: 1px dashed pink;
+  //       }
+  // }
+  
+  body{
+      background-color: $black100;
+  }
+
+/*==================== 設計風格區域 ====================*/
+
+.bold{
+    font-weight: $font-weight_bold;
+    line-height: $line-height;
+    font-family: 'Noto Sans TC','Noto serif TC';
+}
+
+.regular{
+    font-weight: $font-weight_regular;
+    line-height: $line-height;
+    font-family: 'Noto Sans TC','Noto serif TC';
+}
+
+.display01{
+    font-size:$display01;
+    color: $black0;
+}
+
+.display02{
+    font-size:$display02;
+    color: $black0;
+}
+
+.display03{
+    font-size:$display03;
+    color: $black0;
+}
+
+.heading01{
+    font-size:$heading01;
+    color: $black0;
+}
+
+.heading02{
+    font-size:$heading02;
+    color: $black0;
+}
+
+.heading03{
+    font-size:$heading03;
+    color: $black0;
+}
+
+.heading05{
+    font-size:$heading05;
+    color: $black0;
+}
+
+.heading06{
+    font-size:$heading06;
+    color: $black0;
+}
+
+.text-body{
+    font-size:$body;
+    color: $black0;
+}
+
+.text-small{
+    font-size:$small;
+    color: $black0;
+}
+
+.text-tiny{
+    font-size:$tiny;
+    color: $black0;
+}
+
+
+/*=================== 元件區域 ===================*/
+
+/*======= 導覽列 =======*/
+.navigation{
+    max-width: 1296px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid $black0;
+    position: sticky;
+    top:0;
+    background-color: $black100;
+    z-index: 10000;
+    height: 80px;
+    
+    
+
+    /*導覽列圖片*/
+    a{
+        background-image:url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png);
+        height:100%;
+        background-position:center;
+        background-size: 100%;
+        background-repeat:no-repeat;
+        text-indent:101%;
+        overflow:hidden;
+        white-space: nowrap;
+    }
+
+    /*導覽列按鈕*/
+    ul{
+        display: flex;
+        align-items: center;
+        li,span{
+            margin:12px;
+        }
+
+        span{
+            color: $black0;
+            display: none;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .navigation{
+        padding: 12px;
+        ul{
+            li{
+                display: none;
+            }
+        
+            span{
+                display:block;
+            }
+        } 
+    }  
+}
+
+
+/*======按鈕區塊=====*/
+/*CTA按鈕*/
+.button-CTA{
+    display: flex; 
+    border-radius:$radius-s; 
+    border: 1px solid $black0;
+    padding:20px 40px;
+    background-color: $black100;  
+    color: $black0;
+    font-size: $heading06;
+    font-weight: $font-weight_bold;
+    &:hover{
+        background-color: $black0;
+        color: $black100;
+    }
+}
+
+/*有含icon按鈕*/
+.button-has-icon{
+    display: flex; 
+    align-items: center;
+    border-radius:$radius-s; 
+    border: 1px solid $black20;
+    padding:20px 32px 20px 40px; 
+    background-color: $black0;
+    color: $black80;
+    text-decoration: none;
+    background-color: $black0;
+
+    &:hover{
+        background-color: $black20;
+    }
+
+    p{
+        text-decoration: none;
+    }
+
+    span{
+        font-size: $body;
+    }
+
+   
+
+}
+
+/*篩選的小按鈕*/
+.filter-subButtons{
+    display: flex; 
+    font-size:$body;
+    border-radius:$radius-s; 
+    background-color:$black0;
+    color: $black100;
+    padding:8px 16px;
+    text-decoration: none;
+    &:hover{
+        background-color:$black20;
+        color: $black100;
+        font-weight: $font-weight_bold;
+    }
+}
+
+
+
+
+/*AI卡片頁面按鈕*/
+.pages{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+// 頁面按鈕
+/*有問題 除了line-height 還有沒有更好的方法*/
+.page-btn-on{
+    width: 48px;
+    height: 48px;
+    background-color: $black100;
+    color: $black0;
+    border-radius: $radius-s;
+    text-decoration: none;
+    text-align: center;
+    line-height: 48px;
+    margin:2px;
+}
+
+.page-btn-off{
+    width: 48px;
+    height: 48px;
+    background-color: $black0;
+    color: $black100;
+    border-radius: $radius-s;
+    text-align: center;
+    text-decoration: none;
+    line-height: 48px;
+    margin:2px;
+}
+
+
+/*====== 卡片樣式======*/
+.cardBg{
+    width:32%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $black20;
+    border-radius: $radius-s;
+    overflow: hidden;
+    margin: 0px auto;
+    margin-bottom: 24px;
+    flex-grow: 1;
+
+
+    //防止卡片溢出
+    .cardHidden{
+        overflow: hidden;
+        
+        img{
+            width: 100%;
+            display: block;
+
+            &:hover{
+                transform: scale(1.5);
+                transition: all 0.5s ;
+            }
+        }
+
+        
+    }
+    
+    // 卡片介紹
+    .cardInfo{
+        flex-grow: 1;
+    }
+
+    .cardInfo,.cardAuthor,.cardClass{
+        flex-grow: 1;
+        width:100%;
+        padding:20px 32px ;
+        .heading06,.text-small,.text-body{
+        color:#020202;
+        }
+    }
+
+    .heading{
+        margin-bottom: 12px;
+    }
+
+    .cardInfo,.cardAuthor{
+        border-bottom: 1px solid $black20;
+    }
+
+
+    .cardAuthor,.cardClass{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .shareIcon{
+        img{
+            display: block;
+            width: 18px;
+        }
+    }
+
+}
+
+@media (max-width:768px) {
+    .cardBg{
+        width:49%;
+    }
+}
+@media (max-width:375px) {
+    
+}
+
+
+/*===== 搜尋列 =======*/
+.inputPosition{
+    position: relative;
+    .searchBar{
+        width: 100%;
+        background-color: $black20;
+        padding: 20px 76px;
+        border-radius: $radius-s;
+        margin-bottom: 24px;
+        border: 0px; 
+    }
+
+    span{
+        position: absolute;
+        top:16px;
+        left:40px;
+        font-size: 18px;
+        margin:4px;
+    }
+}
+
+
+
+/*====================排版區塊=======================*/
+
+
+
+
+//CTA-透過AI 工具王的強大模型讓您的業務更聰明
+.CTA{
+    max-width: 1296px;
+    margin: 0px auto;
+    margin-bottom: $section-m;
+
+    h2{
+        margin:40px 0px;
+    }
+
+    button{
+       margin-bottom: 100px; 
+    }
+
+    .motin{
+        width:100%;
+        display: flex;
+        justify-content: flex-end;
+            .motionSpace{
+            width:60%;
+            }
+            img{
+                width:33.3333%;
+            }
+    }
+}
+
+@media (max-width:768px) {
+    .CTA{
+        padding: 0px 12px;
+        .display02{
+            font-size: 48px;
+            
+           }
+        
+        .button-CTA{
+            font-size: 20px;
+        }
+    
+         .motin{
+         justify-content:center;
+            .motionSpace{
+            width:auto;
+            }
+         }
+    }
+}
+
+
+//sectionService-我們的服務
+.sectionService{
+    max-width: 1296px;
+    margin: 0px auto;
+    margin-bottom: $section-m;
+     
+    .OurService{
+        display: flex;
+        margin-bottom: 80px;
+        gap:24px;
+    }
+
+    .OurServiceIntro{
+        width: 60%;
+    }
+
+    //卡片
+    ul{
+        display: flex;
+        gap:24px;
+
+        /*卡片內容*/
+        li{
+            width:33.333333%;
+            padding: 80px 40px;
+            border:1px solid $black80;
+            border-radius: $radius-s;
+            
+
+            img{
+                width: 19%;
+                margin-bottom: 20px;
+            }
+
+            h3{
+                margin-bottom: 20px;
+            }
+        }      
+    }
+}
+
+@media (max-width:768px) {
+    .sectionService{
+        padding: 0px 12px;
+        .OurService{
+            flex-direction: column;
+            .heading03{
+                font-size: 20px;
+            }
+            .heading01{
+                font-size: 32px;
+            }
+        }
+       
+        ul{
+            flex-wrap: wrap;
+            gap:12px;
+            justify-content: space-between;
+            li{
+                width: 49%;
+                flex-grow: 1;
+            }
+        }        
+    }
+}
+
+@media (max-width:375px) {
+    .sectionService ul li{
+        padding: 40px 20px;
+    }
+}
+
+//sectionCoopration-合作夥伴
+.sectionCoopration{
+    max-width: 1296px;
+    margin: 0px auto;
+    margin-bottom: $section-m;
+
+    h3{
+        margin-bottom: 80px;
+    }
+}
+
+
+.logoContainer{
+    position: relative;
+    margin-bottom: 48px;
+    overflow-x: scroll;
+    .logo-linear{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 6%, rgba(0,0,0,0) 49%, rgba(0,0,0,0) 94%, rgba(0,0,0,1) 100%);
+    }   
+    .logos{
+        display:flex;
+        justify-content: center;
+        img{
+            width:160px; 
+            margin: 10px;
+        }
+
+    }
+
+}
+
+.usersCard{
+    ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        li{
+            width: 33.33333%;
+            padding: 40px;
+            margin-bottom: 24px;
+            gap: 24px;
+            background-color: $black0-8;
+            border-radius: $radius-s;
+            display: flex;
+            flex-direction:column;
+
+            p{
+                flex-grow: 1;
+            }
+            
+            .stars,.text-body {
+                margin-bottom: 20px;
+            }
+
+            .usersInfo{
+                display: flex;
+                img{
+                    width: 48px;
+                    height: 48px;
+                    margin-right: 16px;
+                    margin-bottom: 8px;
+                }
+                h4{
+                    margin-bottom: 8px;
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .sectionCoopration{
+        padding: 0px 12px;
+         h3{
+            margin-bottom: 24px;
+        }
+        ul{
+            flex-wrap: wrap;
+            overflow: hidden;
+            
+            li{
+                width:100%; 
+                padding: 20px;
+                flex-grow: 1;
+                gap:0px;
+            }
+        }
+    }
+}
+
+@media (max-width:375px) {
+    li{
+        width: 100%;
+    }
+}
+
+
+/*這些超酷的應用，都來自 AI工具王*/
+.sectionAIKing{
+    margin: 0px auto;
+    background-color: $black0;
+    border-radius: $radius-l;
+    
+    /*超酷應用卡片容器*/
+    .container{
+        max-width: 1296px;
+        padding: 160px 0px;
+        margin: 0px auto;
+        margin-bottom: 78px;
+
+        /*些超酷的應用，都來自 AI工具王*/
+        h3{
+            margin-bottom: 80px;
+        }
+
+        /*文字樣式*/
+        .display03,.text-body{
+            color: $black100;
+        }
+
+        p{
+            color: $black80;
+        }
+
+    }
+
+    /*篩選按鈕列*/
+    .filterContainer{
+        width: 100%;
+        height:64px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        white-space: nowrap;
+    
+
+        .filter-subButtons-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            gap:8px;
+            white-space: nowrap;
+        }
+    }
+
+    @media (max-width:768px) {
+        .filterContainer{
+            height:40px;
+        }
+    }
+
+
+    /*AI卡片區*/
+    .cardIntroduce{
+        margin-bottom: $section-m;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+            gap: 24px;
+        }  
+    }
+
+}
+
+@media (max-width:768px) {
+    .sectionAIKing{
+        border-radius: $radius-m;
+        .container{
+            padding: 160px 12px;
+        }
+        .cardIntroduce{
+            margin-bottom: auto;
+            ul{
+                gap:12px;
+            }
+        }
+        .pages{
+            justify-content: center;
+        }
+    }   
+}
+/*現在就來建立屬於你的服務吧*/
+.sectionBuildService{
+    max-width:1296px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px;
+    margin-bottom: 80px;
+
+    h3{
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width:768px) {
+    .sectionBuildService{
+        padding: 120px 77px;
+    }
+}
+
+
+@media (max-width:375px) {
+    .sectionBuildService{
+        padding: 120px 73px;
+        margin:0px auto;
+        h3{
+            text-align: center;
+        }
+        .button-CTA{
+            font-size:20px;
+        }
+    }
+}
+
+.sectionFooter{
+    max-width: 1296px;
+    margin: 0px auto;
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 0px;
+        border-top: 1px solid $black0;
+        
+        img{
+            height:40px;
+        }
+    
+    }
+
+    @media (max-width:768px) {
+        .footer{
+            flex-wrap: wrap;
+            .footer-nav{
+                order:1;
+            }
+            img{
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+
+    /*footer社群連結*/
+    .footerSMS{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 0px;
+        border-top: 1px solid $black0;
+
+        // 版權
+        .AItoolKing{
+            padding-right: 80px;
+        }
+
+        // 社群
+        .SMS{
+            display: flex;
+            flex-grow: 1;
+            a{
+                padding:12px 10px;
+                text-decoration: none;
+            }
+        }
+        .backToTop{
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            p{
+                margin-right: 12px;
+            }
+        }
+    }
+
+}
+
+@media (max-width:768px) {
+    .sectionFooter{
+        padding: 0px 12px;
+    }
+    .AItoolKing{
+        order:1;
+        margin-bottom: 24px;
+        padding-right:auto;
+    }
+    .SMS{
+        order:3;
+        width: 100%;
+    }
+    .backToTop{
+        order:2;
+        margin-bottom: 24px;
+
+    }
+    
+}
+
+
+
+ 
+
+
+    
+
