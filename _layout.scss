@@ -15,6 +15,30 @@ $black0-8:#ffffff13;
 $Primary:#F18724;
 $Surface:#F2EFE7;
 
+
+
+*,*::before,*::after {
+    box-sizing: border-box;
+  //   outline: 1px dashed orange;
+  }
+  
+  // @media (max-width:768px) {
+  //     *,*::before,*::after {
+  //         outline: 1px dashed cyan;
+  //     }
+  // }
+  
+  // @media (max-width:375px) {
+  //     *,*::before,*::after {
+  //         outline: 1px dashed pink;
+  //       }
+  // }
+  
+  body{
+      background-color: $black100;
+  }
+
+/*==================== 設計風格區域 ====================*/
 //圓角
 /*border-radius*/
 $radius-s:16px;
@@ -47,30 +71,6 @@ $small:14px;
 $tiny:12px;
 
 
-
-
-*,*::before,*::after {
-    box-sizing: border-box;
-  //   outline: 1px dashed orange;
-  }
-  
-  // @media (max-width:768px) {
-  //     *,*::before,*::after {
-  //         outline: 1px dashed cyan;
-  //     }
-  // }
-  
-  // @media (max-width:375px) {
-  //     *,*::before,*::after {
-  //         outline: 1px dashed pink;
-  //       }
-  // }
-  
-  body{
-      background-color: $black100;
-  }
-
-/*==================== 設計風格區域 ====================*/
 
 .bold{
     font-weight: $font-weight_bold;
