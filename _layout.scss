@@ -412,6 +412,7 @@ $tiny:12px;
     max-width: 1296px;
     margin: 0px auto;
     margin-bottom: $section-m;
+    padding:0px 15px;
 
     h2{
         margin:40px 0px;
@@ -461,6 +462,7 @@ $tiny:12px;
     max-width: 1296px;
     margin: 0px auto;
     margin-bottom: $section-m;
+    padding:0px 15px;
      
     .OurService{
         display: flex;
@@ -533,6 +535,7 @@ $tiny:12px;
     max-width: 1296px;
     margin: 0px auto;
     margin-bottom: $section-m;
+    padding:0px 15px;
 
     h3{
         margin-bottom: 80px;
@@ -638,9 +641,10 @@ $tiny:12px;
     /*超酷應用卡片容器*/
     .container{
         max-width: 1296px;
-        padding: 160px 0px;
+        padding: 160px 15px;
         margin: 0px auto;
         margin-bottom: 78px;
+        
 
         /*些超酷的應用，都來自 AI工具王*/
         h3{
@@ -722,7 +726,7 @@ $tiny:12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 0px;
+    padding: 80px 15px;
     margin-bottom: 80px;
 
     h3{
@@ -753,6 +757,7 @@ $tiny:12px;
 .sectionFooter{
     max-width: 1296px;
     margin: 0px auto;
+    padding:0px 15px;
     .footer{
         display: flex;
         justify-content: space-between;
