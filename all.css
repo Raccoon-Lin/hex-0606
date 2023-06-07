@@ -251,7 +251,6 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border: 0px;
 }
 
 /*有問題 除了line-height 還有沒有更好的方法*/
@@ -265,6 +264,7 @@ body {
   text-align: center;
   line-height: 48px;
   margin: 2px;
+  border: 0px;
 }
 
 .page-btn-off {
@@ -277,6 +277,7 @@ body {
   text-decoration: none;
   line-height: 48px;
   margin: 2px;
+  border: 0px;
 }
 
 /*====== 卡片樣式======*/
