@@ -251,6 +251,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  border: 0px;
 }
 
 /*有問題 除了line-height 還有沒有更好的方法*/
